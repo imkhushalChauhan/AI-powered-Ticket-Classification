@@ -1,0 +1,12 @@
+{
+    "type": "module",
+    "dependencies": {
+        "bullmq": "^6.0.10",
+        "cors": "^2.8.6",
+        "dotenv": "^17.4.2",
+        "express": "^5.2.1",
+        "groq-sdk": "^1.5.0",
+        "ioredis": "^6.0.0",
+        "mongoose": "^9.9.1"
+    }
+}
