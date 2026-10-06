@@ -8,10 +8,13 @@ import classifyTicket from "./services/classifyTicket.js";
 import ticketQueue from "./queue/ticketQueue.js";
 
 const app = express();
-app.use(express.json());
-app.use(cors());
 
-app.post("/ticket", async (req, res) => {
+app.use(cors({
+  origin: "http://localhost:5173"
+}));
+app.use(express.json());
+
+app.post("/tickets", async (req, res) => {
   try {
     const { title, description } = req.body;
 
@@ -45,7 +48,7 @@ mongoose
     .then(()=>{
         console.log("Connected to Mongodb");
 
-        app.listen(5000, ()=>{
+        app.listen(3000, ()=>{
             console.log("Server is connected on port 3000")
         });
     })

@@ -1,3 +1,5 @@
 .env
 node_modules/
 note.txt
+.env.*
+!.env.example
